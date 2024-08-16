@@ -16,7 +16,8 @@ class Pessoa {
 
     meuImc() {
         return this.peso / (this.altura * this.altura);
-    }
+    }// esse é um método, ele está dentro da classe. 
+    //Parece uma função, mas funçã é fora da classe
     classificarImc() {
         let imc = this.meuImc();
 

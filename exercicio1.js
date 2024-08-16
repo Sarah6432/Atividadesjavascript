@@ -17,7 +17,7 @@ class Carro {
     }
     calcularGastoDeViagem(distanciaEmKm, precoCombustivel){
          return distanciaEmKm * this.gastoMedioPorKm * precoCombustivel;
-    }
+    }// isso aqui é o metodo e se parece muito com uma função, mas é uma instancia de uma classe
 }
 
 const uno = new Carro("fiat", "rosa", 1/12);
