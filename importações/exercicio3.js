@@ -1,16 +1,33 @@
-const { gets, print } = require('./funcoesauxiliares');
+/* 2) Faça um programa que receba N (quantidade de numeros) e seus 
+respectivos valores e imprima o maior numero par e o menor numero impar.
 
-const entradas = gets();
+ex de entrada: 5, 3, 4, 1, 10, 8
 
+saida:
+Maior numero par: 10
+Menor numero impar: 1
+*/
+const { gets, print } = require('./funcoesauxiliares-ex3');
 
-let maiorValorEncontrado = 0;
+const valores = gets();
 
-for (let i = 0; i < entradas; i++) {
-    const numeroSorteado = gets();
-    if (numeroSorteado > maiorValorEncontrado) {
-        maiorValorEncontrado = numeroSorteado;
+let maiorValorPar = null;
+let menorValorImpar = null;
+
+for (let i = 0; i < valores; i++) {
+    const numero = gets();
+
+    if (numero % 2 === 0) {
+        if (maiorValorPar === null || numero > maiorValorPar) {
+            maiorValorPar = numero;
+        }
+
+    } else {
+        if (menorValorImpar === null || numero < menorValorImpar) {
+            menorValorImpar = numero;
+        }
     }
-
 }
+print('O maior numero par é ' + maiorValorPar);
+print('O menor numero impar é ' + menorValorImpar);
 
-print(maiorValorEncontrado); 

@@ -1,5 +1,5 @@
 let i = 0;
-const entradas = [ 5.5];
+const entradas = [ 5, 3, 1, 4, 10, 8 ];
 
 function gets() {
     const valor = entradas[i];
